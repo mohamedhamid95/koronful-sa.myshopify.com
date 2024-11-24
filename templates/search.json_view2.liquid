@@ -1,0 +1,18 @@
+{% layout none %}
+{% capture search_result %}
+  {% if search.performed %}
+      {% assign query = search.terms | escape %}
+      {% for item in search.results %}
+        {% if item.object_type == 'product' %}
+          {% for variant in item.variants %}
+            {% if variant.sku contains query %}
+              {{ variant | json }}
+              {% break %}
+            {% endif %}
+          {% endfor %}   
+        {% endif %}
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endif %}
+{% endcapture %}
+[{{- search_result -}}]

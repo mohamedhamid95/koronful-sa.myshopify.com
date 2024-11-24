@@ -1,0 +1,29 @@
+{% layout none %}
+{% capture search_result %}
+  {% if search.performed %}
+      {% assign query = search.terms | escape %}
+      {% for item in search.results %}
+        {% if item.object_type == 'product' %}
+          {% for variant in item.variants %}
+            {% if variant.sku contains query %}
+              {
+                "id": {{- item.id -}},
+                "variant_id": {{- variant.id -}},
+                "title": "{{- item.title -}}",
+                "handle": "{{- item.handle -}}",
+                "description": "{{- item.description -}}",
+                "available": {{- variant.available -}},
+                "inventory_quantity": {{- variant.inventory_quantity -}},
+                "price": "{{- variant.price | money_without_currency -}}",
+                "compare_at_price": "{{- variant.compare_at_price | money_without_currency -}}",
+                "url": "{{- "https://" | append: shop.permanent_domain | append: variant.url -}}"
+              }
+              {% break %}
+            {% endif %}
+          {% endfor %}   
+        {% endif %}
+        {% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    {% endif %}
+{% endcapture %}
+[{{- search_result -}}]
