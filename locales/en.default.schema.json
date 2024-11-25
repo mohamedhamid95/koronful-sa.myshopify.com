@@ -355,6 +355,12 @@
           "label": "Vertical space"
         }
       }
+    },
+    "taxes": {
+      "label": "Taxes",
+      "include_taxes_in_products": "Include taxes in product prices",
+      "include_taxes_in_products_info": "Enable this option to display product prices with taxes included throughout the shop",
+      "tax_percentage": "Tax percentage (%)"
     }
   },
   "sections": {

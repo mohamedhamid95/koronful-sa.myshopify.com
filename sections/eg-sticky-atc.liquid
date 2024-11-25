@@ -200,14 +200,21 @@
                         <div class="quantity-input-wrapper">
                             <div class="select" style="{% if product.has_only_default_variant %}display: none;{% endif %}">
                                 <select class="select__select" name="id" aria-label="Select variant">
+                                    {% assign tax_rate = settings.tax_percentage | times: 1.0 | divided_by: 100 | default: 0.15 %}
                                     {% for variant in product.variants %}
-                                        {% assign variant_image = variant.image | default: product.featured_image %}
+                                        {% liquid
+                                            assign variant_image = variant.image | default: product.featured_image
+                                            assign variant_price = variant.price
+                                            if settings.include_taxes_in_products == true and cart.taxes_included == false
+                                                assign variant_price = variant_price | times: tax_rate | plus: variant_price
+                                            endif
+                                        %}
                                         <option
                                             value="{{ variant.id }}"
                                             data-img="{{ variant_image | img_url: img_size }}"
                                             data-variant-available="{{ variant.available }}"
                                             {% if current_variant.id == variant.id %}selected{% endif %}>
-                                            {{ variant.title }} - {{ variant.price | money }}
+                                            {{ variant.title }} - {{ variant_price | money }}
                                         </option>
                                     {% endfor %}
                                 </select>

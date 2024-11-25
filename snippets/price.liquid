@@ -19,6 +19,13 @@
 
   assign compare_at_price = target.compare_at_price
   assign price = target.price | default: 1999
+
+  assign tax_rate = settings.tax_percentage | times: 1.0 | divided_by: 100 | default: 0.15
+  if settings.include_taxes_in_products == true and cart.taxes_included == false
+    assign compare_at_price = compare_at_price | times: tax_rate | plus: compare_at_price
+    assign price = price | times: tax_rate | plus: price
+  endif
+
   assign available = target.available | default: false
   assign money_price = price | money
   if settings.currency_code_enabled
@@ -69,7 +76,12 @@
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
       <span class="price-item price-item--last">
-        <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
+        {% liquid
+          assign unit_price = product.selected_or_first_available_variant.unit_price
+          assign unit_price_tax_amount = unit_price | times: tax_rate 
+          assign unit_price = unit_price | plus: unit_price_tax_amount
+        %}
+        <span>{{- unit_price | money -}}</span>
         <span aria-hidden="true">/</span>
         <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
         <span>

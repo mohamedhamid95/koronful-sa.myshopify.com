@@ -65,7 +65,24 @@
                   </thead>
 
                   <tbody role="rowgroup">
+                    {% assign tax_rate = settings.tax_percentage | times: 1.0 | divided_by: 100 | default: 0.15 %}
                     {%- for item in cart.items -%}
+                      {% liquid
+                        assign item_original_price = item.original_price
+                        assign item_final_price = item.final_price
+                        assign item_original_line_price = item.original_line_price
+                        assign item_final_line_price = item.final_line_price
+                        assign cart_total_price = cart.total_price
+
+                        if settings.include_taxes_in_products == true and cart.taxes_included == false
+                          assign item_original_price = item_original_price | times: tax_rate | plus: item_original_price
+                          assign item_final_price = item_final_price | times: tax_rate | plus: item_final_price
+                          assign item_original_line_price = item_original_line_price | times: tax_rate | plus: item_original_line_price
+                          assign item_final_line_price = item_final_line_price | times: tax_rate | plus: item_final_line_price
+                          assign cart_total_price = cart_total_price | times: tax_rate | plus: cart_total_price
+                        endif
+                      %}
+
                       <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
@@ -94,18 +111,18 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                               <s class="cart-item__old-price product-option">
-                                {{- item.original_price | money -}}
+                                {{- item_original_price | money -}}
                               </s>
                               <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                               <strong class="cart-item__final-price product-option">
-                                {{ item.final_price | money }}
+                                {{ item_final_price | money }}
                               </strong>
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ item.original_price | money }}
+                              {{ item_original_price | money }}
                             </div>
                           {%- endif -%}
 
@@ -168,18 +185,18 @@
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  {{ item.original_line_price | money }}
+                                  {{ item_original_line_price | money }}
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
-                                  {{ item.final_line_price | money }}
+                                  {{ item_final_line_price | money }}
                                 </span>
                               </div>
                             {%- else -%}
                               <span class="price price--end">
-                                {{ item.original_line_price | money }}
+                                {{ item_original_line_price | money }}
                               </span>
                             {%- endif -%}
 
@@ -271,7 +288,7 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+            <p class="totals__subtotal-value">{{ cart_total_price | money_with_currency }}</p>
           </div>
 
           <div>

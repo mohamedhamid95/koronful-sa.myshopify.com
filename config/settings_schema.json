@@ -1546,5 +1546,23 @@
         "info": "t:settings_schema.cart.settings.cart_drawer.collection.info"
       }
     ]
+  },
+  {
+    "name": "t:settings_schema.taxes.label",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "include_taxes_in_products",
+        "label": "t:settings_schema.taxes.include_taxes_in_products",
+        "info": "t:settings_schema.taxes.include_taxes_in_products_info",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "tax_percentage",
+        "label": "t:settings_schema.taxes.tax_percentage",
+        "default": 15
+      }
+    ]
   }
 ]
