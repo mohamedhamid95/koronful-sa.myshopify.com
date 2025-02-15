@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "slideshow_dPBhR4": {
@@ -15,12 +6,12 @@
         "slide_mtR8JF": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/a-house-plant-and-their-dark-green-leaves-soaking-in-the-light.jpg",
+            "image": "shopify:\/\/shop_images\/a-house-plant-and-their-dark-green-leaves-soaking-in-the-light.jpg",
             "heading": "الطبيعة في منزلك",
             "heading_size": "h1",
             "subheading": "أضف لمسة طبيعية إلى منزلك مع تشكيلة النباتات الصناعية المثالية.",
             "button_label": "المزيد",
-            "link": "shopify://collections/الأشجار-الصناعية",
+            "link": "shopify:\/\/collections\/الأشجار-الصناعية",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -33,12 +24,12 @@
         "slide_metT3D": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/spring-and-garden-theme-flat-lay.jpg",
+            "image": "shopify:\/\/shop_images\/spring-and-garden-theme-flat-lay.jpg",
             "heading": "مساحتك، حديقتك، طبيعتك",
             "heading_size": "h1",
             "subheading": "اكتشف تنوع النباتات والزهور التي تحول مساحتك الصغيرة إلى واحة من الجمال، سواء كنت تبحث عن لمسة خضراء في الداخل أو حديقة خارجية خلابة.",
             "button_label": "المزيد",
-            "link": "shopify://collections/نباتات-خضراء-بمراكز",
+            "link": "shopify:\/\/collections\/نباتات-خضراء-بمراكز",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": false,
@@ -69,14 +60,14 @@
         "heading_VxhEgc": {
           "type": "heading",
           "settings": {
-            "heading": "<h4>الفرنفل علامة تجاريه تأسست منذ اكثر من 2 سنة</h4>",
+            "heading": "<h4>الفرنفل علامة تجاريه تأسست منذ اكثر من 2 سنة<\/h4>",
             "heading_size": "h2"
           }
         },
         "text_HXRRph": {
           "type": "text",
           "settings": {
-            "text": "<h5> ليست مجرد شركة بل شريك ملتزم بنجاح عملائها. نعمل معاً لتحقيق رؤية العميل بكل دقة واحترافية، ونحول الأفكار إلى إنجازات ملموسة على أرض الواقع.</h5>"
+            "text": "<h5> ليست مجرد شركة بل شريك ملتزم بنجاح عملائها. نعمل معاً لتحقيق رؤية العميل بكل دقة واحترافية، ونحول الأفكار إلى إنجازات ملموسة على أرض الواقع.<\/h5>"
           }
         }
       },
@@ -114,7 +105,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "تصفح المنتجات",
-            "button_link_1": "shopify://collections",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_secondary_1": false,
             "button_label_2": "المزيد",
             "button_link_2": "#",
@@ -129,7 +120,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify://shop_images/pexels-amina-filkins-5409731.jpg",
+        "image": "shopify:\/\/shop_images\/pexels-amina-filkins-5409731.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -230,7 +221,7 @@
       "settings": {
         "title": "الأكثر مبيعا",
         "heading_size": "h2",
-        "description": "<p>المنتجات الأكثر مبيعاً لهذا الشهر</p>",
+        "description": "<p>المنتجات الأكثر مبيعاً لهذا الشهر<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "الأكثر-مبيعاً",
@@ -319,7 +310,7 @@
         "template--15948283510984__6c5f181f-0666-45ea-a6dc-717104e1244c-1670083980f31ce2bd-1": {
           "type": "text",
           "settings": {
-            "text": "<p>شركة قرنفل للورد والنباتات والأشجار الصناعية عالية الجودة ✨</p><p> لحظاتك المميزة تستحق بهجة الورد 🌺🌿</p>",
+            "text": "<p>شركة قرنفل للورد والنباتات والأشجار الصناعية عالية الجودة ✨<\/p><p> لحظاتك المميزة تستحق بهجة الورد 🌺🌿<\/p>",
             "text_style": "body"
           }
         },
@@ -337,7 +328,7 @@
         "template--15948283510984__6c5f181f-0666-45ea-a6dc-717104e1244c-1670083980f31ce2bd-2"
       ],
       "settings": {
-        "image": "shopify://shop_images/Screenshot_2024-10-20_at_16.35.05.png",
+        "image": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.35.05.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -356,21 +347,21 @@
         "6320ccd1-c4c4-4aa7-bdaa-393cf4b23362": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/bouquets-of-flowers-on-display-in-window.jpg",
+            "image": "shopify:\/\/shop_images\/bouquets-of-flowers-on-display-in-window.jpg",
             "image_padding": false
           }
         },
         "2c3f1e7b-e863-4776-aabd-3e3a787846df": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/person-holds-the-sides-of-a-potted-plant.jpg",
+            "image": "shopify:\/\/shop_images\/person-holds-the-sides-of-a-potted-plant.jpg",
             "image_padding": false
           }
         },
         "e8d7de23-29df-46d5-8206-0eed8062c8ee": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/pink-city-flowers.jpg",
+            "image": "shopify:\/\/shop_images\/pink-city-flowers.jpg",
             "image_padding": false
           }
         }
@@ -400,7 +391,7 @@
             "title": "",
             "title_size": "h3",
             "show_stars": true,
-            "description": "<p>شكرا وصل الطلب الله يعطيك العافيه مره شكرا على التوصيل وعلى حسن التعامل إن شاء الله على طول أتعامل معاكم.</p>",
+            "description": "<p>شكرا وصل الطلب الله يعطيك العافيه مره شكرا على التوصيل وعلى حسن التعامل إن شاء الله على طول أتعامل معاكم.<\/p>",
             "author_name": ""
           }
         },
@@ -410,7 +401,7 @@
             "title": "",
             "title_size": "h3",
             "show_stars": true,
-            "description": "<p>السلام عليكم واسعد الله اوقاتكم حابة اتشكركم مرة على التعامل الراقي وسرعة ارسال الطلب. ربي يسعدكم.</p>",
+            "description": "<p>السلام عليكم واسعد الله اوقاتكم حابة اتشكركم مرة على التعامل الراقي وسرعة ارسال الطلب. ربي يسعدكم.<\/p>",
             "author_name": ""
           }
         },
@@ -420,7 +411,7 @@
             "title": "",
             "title_size": "h3",
             "show_stars": true,
-            "description": "<p>الصراحة المنتجات فاجأتني بجودتها وجمالها .. والاهتمام بالتفاصيل .. من التغليف الراقي إلى العلب .. بالإضافة إلى السعر وسرعة التوصيل</p>",
+            "description": "<p>الصراحة المنتجات فاجأتني بجودتها وجمالها .. والاهتمام بالتفاصيل .. من التغليف الراقي إلى العلب .. بالإضافة إلى السعر وسرعة التوصيل<\/p>",
             "author_name": ""
           }
         },
@@ -430,7 +421,7 @@
             "title": "",
             "title_size": "h3",
             "show_stars": true,
-            "description": "<p>ألف شكر لكم على هذا المجهود الأكثر من كافي الذي نفخر فيه جميعا كسعوديين، موفقين والى الامام داىما الافضل يا رب</p>",
+            "description": "<p>ألف شكر لكم على هذا المجهود الأكثر من كافي الذي نفخر فيه جميعا كسعوديين، موفقين والى الامام داىما الافضل يا رب<\/p>",
             "author_name": ""
           }
         },
@@ -440,7 +431,7 @@
             "title": "",
             "title_size": "h3",
             "show_stars": true,
-            "description": "<p>المنتجات رائعة وافادتني كثير وبالذات احنا مقبلين على شهر الخير شهر رمضان لايكتمل يومك الا بمنتجاتكم الخرافية ماشاء الله</p>",
+            "description": "<p>المنتجات رائعة وافادتني كثير وبالذات احنا مقبلين على شهر الخير شهر رمضان لايكتمل يومك الا بمنتجاتكم الخرافية ماشاء الله<\/p>",
             "author_name": ""
           }
         },
@@ -450,7 +441,7 @@
             "title": "",
             "title_size": "h3",
             "show_stars": true,
-            "description": "<p>قمة في الجمال والفخامه والجودة حبيت كثير الشكل والتفاصيل، شكراً شكراً وبأذن الله بطلب عن قريب مره ثانية </p>",
+            "description": "<p>قمة في الجمال والفخامه والجودة حبيت كثير الشكل والتفاصيل، شكراً شكراً وبأذن الله بطلب عن قريب مره ثانية <\/p>",
             "author_name": ""
           }
         }
@@ -469,7 +460,7 @@
         "text_align": "center",
         "title": "من آراء عملاءنا",
         "title_size": "h2",
-        "description": "<p>لكل تجربة مع متجرنا</p>",
+        "description": "<p>لكل تجربة مع متجرنا<\/p>",
         "carousel_arrows": true,
         "carousel_pagination": true,
         "carousel_easing": "cubic-bezier(.42,.65,.27,.99)",
@@ -495,8 +486,8 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "cover_image": "shopify://shop_images/flowers-in-toaster.jpg",
-        "video_url": "https://youtu.be/7KSVUKp6Rxs",
+        "cover_image": "shopify:\/\/shop_images\/flowers-in-toaster.jpg",
+        "video_url": "https:\/\/youtu.be\/7KSVUKp6Rxs",
         "description": "",
         "full_width": false,
         "color_scheme": "background-1",
@@ -510,10 +501,10 @@
         "9f802c1f-e928-4c96-99f8-d677d6635b33": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/Screenshot_2024-10-20_at_16.34.11.png",
+            "img": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.34.11.png",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "20",
             "comments_count": "15"
           }
@@ -521,10 +512,10 @@
         "43e5916b-e3ab-4609-bee2-f1c69a062edd": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/Screenshot_2024-10-20_at_16.35.21.png",
+            "img": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.35.21.png",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "50",
             "comments_count": "43"
           }
@@ -532,10 +523,10 @@
         "86eb15af-6e90-4ddb-b94b-cfe2d58c7c14": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/Screenshot_2024-10-20_at_16.34.32.png",
+            "img": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.34.32.png",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "13",
             "comments_count": "5"
           }
@@ -543,10 +534,10 @@
         "f90066ef-a8c2-4799-823c-869bc7d1183c": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/Screenshot_2024-10-20_at_16.35.05.png",
+            "img": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.35.05.png",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "14",
             "comments_count": "7"
           }
@@ -554,10 +545,10 @@
         "23a30175-b0d9-45a5-bbc0-d6a3f0f256b8": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/Screenshot_2024-10-20_at_16.40.30.png",
+            "img": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.40.30.png",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "30",
             "comments_count": "15"
           }
@@ -565,10 +556,10 @@
         "d79a7b89-0009-41b0-b8e0-74911aa4b11f": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/Screenshot_2024-10-20_at_16.41.16.png",
+            "img": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.41.16.png",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "40",
             "comments_count": "33"
           }
@@ -576,10 +567,10 @@
         "569ccdf3-c0cc-4de6-9708-627d96cb9fb8": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/Screenshot_2024-10-20_at_16.41.02.png",
+            "img": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.41.02.png",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "63",
             "comments_count": "14"
           }
@@ -587,10 +578,10 @@
         "55e01a42-f94f-4ba7-bfea-4dc8069e1726": {
           "type": "block",
           "settings": {
-            "img": "shopify://shop_images/17.jpg",
+            "img": "shopify:\/\/shop_images\/17.jpg",
             "img_width": "900",
             "img_height": "900",
-            "url": "https://www.instagram.com/koronful_sa",
+            "url": "https:\/\/www.instagram.com\/koronful_sa",
             "likes_count": "12",
             "comments_count": "3"
           }
@@ -615,7 +606,7 @@
         "title": "تابعنا على انستقرام",
         "title_size": "h2",
         "description": "",
-        "btn_url": "https://www.instagram.com/koronful_sa",
+        "btn_url": "https:\/\/www.instagram.com\/koronful_sa",
         "btn_text": "@koronful_sa",
         "btn_color": "button--secondary",
         "row_mobile": 2,
@@ -639,7 +630,7 @@
         "template--15948283510984__9f90692a-7e82-4cc9-b7a4-cb228db8abcf-1670083637fb7870ff-1": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>اشترك وتوصل بآخر العروض والتخفيضات. مباشرة عند نزولها.</p>"
+            "text": "<p>اشترك وتوصل بآخر العروض والتخفيضات. مباشرة عند نزولها.<\/p>"
           }
         },
         "template--15948283510984__9f90692a-7e82-4cc9-b7a4-cb228db8abcf-1670083637fb7870ff-2": {
