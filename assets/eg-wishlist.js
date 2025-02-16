@@ -111,6 +111,7 @@ const insertWishlistButtons = () => {
         const productLink = card.querySelector('[href*="/products"]')?.href;
         let productHandle = productLink?.split('products/')[1]
         productHandle = productHandle?.split('?')[0]
+        productHandle = decodeURIComponent(productHandle)
 
         card.querySelector('.card__inner .card__content').insertAdjacentHTML('beforeend', `
             <button
@@ -143,6 +144,7 @@ const insertWishlistButtons = () => {
         const productLink = productForm.closest('.product').querySelector('[href*="/products"]').href
         let productHandle = productLink.split('products/')[1]
         productHandle = productHandle.split('?')[0]
+        productHandle = decodeURIComponent(productHandle)
 
         productForm.insertAdjacentHTML('afterend', `
             <button
