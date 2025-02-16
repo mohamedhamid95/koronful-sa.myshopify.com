@@ -208,8 +208,6 @@ window.onClickEgWishlistButton = async (btn, event) => {
         const response = await fetch(`/products/${btn.dataset.productHandle}.js`)
         const product = await response.json()
 
-        console.log(product)
-
         wishlist.push({
             id: product.id,
             handle: product.handle,
