@@ -60,7 +60,7 @@
         "heading_VxhEgc": {
           "type": "heading",
           "settings": {
-            "heading": "<h4>الفرنفل علامة تجاريه تأسست منذ اكثر من 2 سنة<\/h4>",
+            "heading": "<h3>الفرنفل علامة تجاريه تأسست منذ اكثر من 2 سنة<\/h3>",
             "heading_size": "h2"
           }
         },
@@ -137,76 +137,62 @@
     "collection_list_kNHhey": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_Tt7mfC": {
+        "featured_collection_nFhm3y": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "الاشجار"
           }
         },
-        "featured_collection_8VdUy6": {
+        "featured_collection_n3pWPq": {
           "type": "featured_collection",
           "settings": {
-            "collection": "النباتات-الصناعية"
+            "collection": "النباتات-الخضراء"
           }
         },
-        "featured_collection_mwqkjJ": {
+        "featured_collection_ENpfRr": {
           "type": "featured_collection",
           "settings": {
-            "collection": "أغصان-وفروع-النباتات-الصناعية"
+            "collection": "باقات-الزهور"
           }
         },
-        "featured_collection_dgrfgV": {
+        "featured_collection_GmczEx": {
           "type": "featured_collection",
           "settings": {
-            "collection": "باقات-الزهور-الصناعية"
+            "collection": "اغصان-الزهور"
           }
         },
-        "featured_collection_CtyjQy": {
+        "featured_collection_4yF8xi": {
           "type": "featured_collection",
           "settings": {
-            "collection": "أغصان-وفروع-الزهور-الصناعية"
+            "collection": "الاصداف-البحريه"
           }
         },
-        "featured_collection_xrRrPK": {
+        "featured_collection_G3pVpy": {
           "type": "featured_collection",
           "settings": {
-            "collection": "الأشجار-الصناعية"
+            "collection": "التحف-والهدايا"
           }
         },
-        "featured_collection_xt6dfy": {
+        "featured_collection_JXwWTE": {
           "type": "featured_collection",
           "settings": {
-            "collection": "أغصان-بأكاليل-ذهبية-متنوعة"
-          }
-        },
-        "featured_collection_r7yyBE": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "الأصداف-البحرية"
-          }
-        },
-        "featured_collection_agiQVR": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "التحف-والبراويز"
+            "collection": "مراكن-النباتات-والزهور"
           }
         }
       },
       "block_order": [
-        "featured_collection_Tt7mfC",
-        "featured_collection_8VdUy6",
-        "featured_collection_mwqkjJ",
-        "featured_collection_dgrfgV",
-        "featured_collection_CtyjQy",
-        "featured_collection_xrRrPK",
-        "featured_collection_xt6dfy",
-        "featured_collection_r7yyBE",
-        "featured_collection_agiQVR"
+        "featured_collection_nFhm3y",
+        "featured_collection_n3pWPq",
+        "featured_collection_ENpfRr",
+        "featured_collection_GmczEx",
+        "featured_collection_4yF8xi",
+        "featured_collection_G3pVpy",
+        "featured_collection_JXwWTE"
       ],
       "settings": {
         "title": "تصنيفات تلائم كل اختيار",
         "heading_size": "h2",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "columns_desktop": 4,
         "color_scheme": "background-1",
         "show_view_all": false,
@@ -230,7 +216,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
         "show_secondary_image": true,
@@ -249,7 +235,7 @@
         "template--15948283510984__a8a2bcbf-1fb1-4aa5-a612-ce3286828f87-1670083637acfd4dbf-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "الأشجار-الصناعية"
+            "collection": "التوليب"
           }
         },
         "template--15948283510984__a8a2bcbf-1fb1-4aa5-a612-ce3286828f87-1670083637acfd4dbf-1": {
@@ -284,10 +270,11 @@
         "0344af95-778c-43e0-9275-f5340fa9b197",
         "56e2749f-7f26-4c09-b702-136f20bb62d3"
       ],
+      "disabled": true,
       "settings": {
         "title": "منتجاتنا المميزة",
         "heading_size": "h2",
-        "image_ratio": "adapt",
+        "image_ratio": "portrait",
         "columns_desktop": 5,
         "color_scheme": "background-1",
         "show_view_all": true,
@@ -328,7 +315,7 @@
         "template--15948283510984__6c5f181f-0666-45ea-a6dc-717104e1244c-1670083980f31ce2bd-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Screenshot_2024-10-20_at_16.35.05.png",
+        "image": "shopify:\/\/shop_images\/AK248G.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
