@@ -2957,3 +2957,12 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
+
+/* Styling the new saudi riyal */
+.price-item__currency {
+  fill: rgb(var(--color-foreground));
+}
+.price-item__currency svg,
+.price-item__currency svg path {
+  fill: inherit;
+}
