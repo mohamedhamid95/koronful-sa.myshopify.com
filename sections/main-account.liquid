@@ -71,7 +71,15 @@
                     {{ order.fulfillment_status_label }}
                   </td>
                   <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
-                    {{ order.total_price | money_with_currency }}</td>
+                    {%- if settings.currency_code_enabled -%}
+                      {{ order.total_price | money_without_currency }}
+                      <span class="price-item__currency">
+                        {% render 'saudi-riyal-symbol' %}
+                      </span>
+                    {%- else -%}
+                      {{ order.total_price | money }}
+                    {%- endif -%}
+                  </td>
                 </tr>
               {%- endfor -%}
             </tbody>

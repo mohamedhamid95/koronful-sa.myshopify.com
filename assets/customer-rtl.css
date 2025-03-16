@@ -153,6 +153,38 @@
   padding-bottom: 4rem;
 }
 
+.customer td .price-item__currency {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  margin-right: 2px;
+}
+
+.customer td .price-item__currency svg {
+  width: inherit;
+}
+
+.customer .order-history tbody td .price-item__currency {
+  width: 1.4rem;
+}
+
+.customer .order-details tbody td .price-item__currency {
+  width: 1.7rem;
+}
+
+.customer .order-details tbody td .regular-price .price-item__currency {
+  width: 1.5rem;
+}
+
+.customer .order-details tfoot td .price-item__currency {
+  width: 1.7rem;
+}
+
+.customer .order-details tfoot tr:last-of-type td .price-item__currency {
+  width: 2rem;
+}
+
 @media screen and (min-width: 750px) {
   .customer tbody td:last-of-type {
     padding-bottom: 0;

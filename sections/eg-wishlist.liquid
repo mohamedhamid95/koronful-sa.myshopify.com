@@ -19,6 +19,10 @@
         text_add: '{{ section.settings.text_add }}',
         text_remove: '{{ section.settings.text_remove }}',
     }
+    {%- if settings.currency_code_enabled -%}
+    {% capture currency %}<span class="price-item__currency">{% render 'saudi-riyal-symbol' %}</span>{% endcapture %}
+        window.eg_wishlist.money_format = `${window.eg_wishlist.money_format.split(" ")[0]} {{currency}}`;
+    {%- endif -%}
 </script>
 
 <script src="{{ 'eg-wishlist.js' | asset_url }}" defer></script>

@@ -111,18 +111,39 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                               <s class="cart-item__old-price product-option">
-                                {{- item_original_price | money -}}
+                                {%- if settings.currency_code_enabled -%}
+                                  {{- item_original_price | money_without_currency -}}
+                                  <span class="price-item__currency">
+                                    {% render 'saudi-riyal-symbol' %}
+                                  </span>
+                                {%- else -%}
+                                  {{- item_original_price | money -}}
+                                {%- endif -%}
                               </s>
                               <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                               <strong class="cart-item__final-price product-option">
-                                {{ item_final_price | money }}
+                                {%- if settings.currency_code_enabled -%}
+                                  {{ item_final_price | money_without_currency }}
+                                  <span class="price-item__currency">
+                                    {% render 'saudi-riyal-symbol' %}
+                                  </span>
+                                {%- else -%}
+                                  {{ item_final_price | money }}
+                                {%- endif -%}
                               </strong>
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ item_original_price | money }}
+                              {%- if settings.currency_code_enabled -%}
+                                {{ item_original_price | money_without_currency }}
+                                <span class="price-item__currency">
+                                  {% render 'saudi-riyal-symbol' %}
+                                </span>
+                              {%- else -%}
+                                {{ item_original_price | money }}
+                              {%- endif -%}
                             </div>
                           {%- endif -%}
 
@@ -136,10 +157,12 @@
                                       assign option_name = option.name
                                     endif
                                   %}
-                                  <div class="product-option">
-                                    <dt>{{ option_name }}: </dt>
-                                    <dd>{{ option.value }}{% unless forloop.last %}, {% endunless %}</dd>
-                                  </div>
+                                  {%- unless option.value == "-" -%}
+                                    <div class="product-option">
+                                      <dt>{{ option_name }}: </dt>
+                                      <dd>{{ option.value }}{% unless forloop.last %}, {% endunless %}</dd>
+                                    </div>
+                                  {%- endunless -%}
                                 {%- endfor -%}
                               {%- endif -%}
 
@@ -191,25 +214,53 @@
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  {{ item_original_line_price | money }}
+                                  {%- if settings.currency_code_enabled -%}
+                                    {{ item_original_line_price | money_without_currency }}
+                                    <span class="price-item__currency">
+                                      {% render 'saudi-riyal-symbol' %}
+                                    </span>
+                                  {%- else -%}
+                                    {{ item_original_line_price | money }}
+                                  {%- endif -%}
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
-                                  {{ item_final_line_price | money }}
+                                  {%- if settings.currency_code_enabled -%}
+                                    {{ item_final_line_price | money_without_currency }}
+                                    <span class="price-item__currency">
+                                      {% render 'saudi-riyal-symbol' %}
+                                    </span>
+                                  {%- else -%}
+                                    {{ item_final_line_price | money }}
+                                  {%- endif -%}
                                 </span>
                               </div>
                             {%- else -%}
                               <span class="price price--end">
-                                {{ item_original_line_price | money }}
+                                {%- if settings.currency_code_enabled -%}
+                                  {{ item_original_line_price | money_without_currency }}
+                                  <span class="price-item__currency">
+                                    {% render 'saudi-riyal-symbol' %}
+                                  </span>
+                                {%- else -%}
+                                  {{ item_original_line_price | money }}
+                                {%- endif -%}
                               </span>
                             {%- endif -%}
 
                             {%- if item.variant.available and item.unit_price_measurement -%}
                               <div class="unit-price caption">
                                 <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                                {{ item.variant.unit_price | money }}
+                                {%- if settings.currency_code_enabled -%}
+                                  {{ item.variant.unit_price | money_without_currency }}
+                                  <span class="price-item__currency">
+                                    {% render 'saudi-riyal-symbol' %}
+                                  </span>
+                                {%- else -%}
+                                  {{ item.variant.unit_price | money }}
+                                {%- endif -%}
                                 <span aria-hidden="true">/</span>
                                 <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
                                 {%- if item.variant.unit_price_measurement.reference_value != 1 -%}
@@ -294,7 +345,16 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-            <p class="totals__subtotal-value">{{ cart_total_price | money_with_currency }}</p>
+            <p class="totals__subtotal-value">
+              {%- if settings.currency_code_enabled -%}
+                {{ cart_total_price | money_without_currency }}
+                <span class="price-item__currency">
+                  {% render 'saudi-riyal-symbol' %}
+                </span>
+              {%- else -%}
+                {{ cart_total_price | money }}
+              {%- endif -%}
+            </p>
           </div>
 
           <div>
@@ -304,7 +364,16 @@
                   <li class="discounts__discount discounts__discount--end">
                     {%- render 'icon-discount' -%}
                     {{ discount.title }}
-                    (-{{ discount.total_allocated_amount | money }})
+                    
+                    {%- if settings.currency_code_enabled -%}
+                      (-{{ discount.total_allocated_amount | money_without_currency }}
+                      <span class="price-item__currency">
+                        {% render 'saudi-riyal-symbol' %}
+                      </span>
+                      )
+                    {%- else -%}
+                      (-{{ discount.total_allocated_amount | money }})
+                    {%- endif -%}
                   </li>
                 {%- endfor -%}
               </ul>

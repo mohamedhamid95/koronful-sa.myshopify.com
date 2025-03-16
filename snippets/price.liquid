@@ -29,7 +29,7 @@
   assign available = target.available | default: false
   assign money_price = price | money
   if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
+    assign money_price = price | money_without_currency
   endif
 
   if target == product and product.price_varies
@@ -52,7 +52,12 @@
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }}
+        {{ money_price}} 
+        {%- if settings.currency_code_enabled -%}
+          <span class="price-item__currency">
+            {% render 'saudi-riyal-symbol' %}
+          </span>
+        {%- endif -%}
       </span>
     </div>
     <div class="price__sale">
@@ -61,7 +66,10 @@
         <span>
           <s class="price-item price-item--regular">
             {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }}
+              {{ compare_at_price | money_without_currency }}
+              <span class="price-item__currency">
+                {% render 'saudi-riyal-symbol' %}
+              </span>
             {% else %}
               {{ compare_at_price | money }}
             {% endif %}
@@ -71,6 +79,11 @@
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
       <span class="price-item price-item--sale price-item--last">
         {{ money_price }}
+        {% if settings.currency_code_enabled %}
+          <span class="price-item__currency">
+            {% render 'saudi-riyal-symbol' %}
+          </span>
+        {% endif %}
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
@@ -81,7 +94,16 @@
           assign unit_price_tax_amount = unit_price | times: tax_rate 
           assign unit_price = unit_price | plus: unit_price_tax_amount
         %}
-        <span>{{- unit_price | money -}}</span>
+        <span>
+          {%- if settings.currency_code_enabled -%}
+            {{- unit_price | money_without_currency -}}
+            <span class="price-item__currency">
+              {% render 'saudi-riyal-symbol' %}
+            </span>
+          {%- else -%}    
+            {{- unit_price | money -}}
+          {%- endif -%}
+        </span>
         <span aria-hidden="true">/</span>
         <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
         <span>

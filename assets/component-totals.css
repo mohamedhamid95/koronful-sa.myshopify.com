@@ -25,6 +25,18 @@
   font-size: 1.8rem;
 }
 
+.totals__subtotal-value .price-item__currency {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  margin-right: 2px;
+}
+
+.totals__subtotal-value .price-item__currency svg {
+  width: inherit;
+}
+
 .cart__ctas + .totals {
   margin-top: 2rem;
 }

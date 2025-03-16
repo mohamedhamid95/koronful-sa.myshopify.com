@@ -31,7 +31,17 @@
               <div class="js-contents" {{ block.shopify_attributes }}>
                 <div class="totals">
                   <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-                  <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+                  <p class="totals__subtotal-value">
+                    {%- if settings.currency_code_enabled -%}
+                      {{- cart.total_price | money_without_currency -}}
+                      <span class="price-item__currency">
+                        {% render 'saudi-riyal-symbol' %}
+                      </span>
+                    {%- else -%}
+                      {{- cart.total_price | money -}}
+                    {%- endif -%}
+                  </p>
+                  
                 </div>
 
                 <div>
@@ -41,7 +51,14 @@
                         <li class="discounts__discount discounts__discount--position">
                           {%- render 'icon-discount' -%}
                           {{ discount.title }}
-                          (-{{ discount.total_allocated_amount | money }})
+                          {%- if settings.currency_code_enabled -%}
+                            (-{{ discount.total_allocated_amount | money_without_currency }})
+                            <span class="price-item__currency">
+                              {% render 'saudi-riyal-symbol' %}
+                            </span>
+                          {%- else -%}
+                            (-{{ discount.total_allocated_amount | money }})
+                          {%- endif -%}
                         </li>
                       {%- endfor -%}
                     </ul>

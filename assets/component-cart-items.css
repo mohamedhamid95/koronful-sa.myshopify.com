@@ -89,6 +89,10 @@
   padding: 0;
 }
 
+.cart-item__price-wrapper > .price {
+  display: inline-flex;
+}
+
 .cart-item__discounted-prices dd {
   margin: 0;
 }
@@ -109,6 +113,19 @@
   font-size: 1.4rem;
   word-break: break-all;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
+  display: inline-flex;
+}
+
+.product-option .price-item__currency {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  margin-right: 2px;
+}
+
+.product-option .price-item__currency svg {
+  width: inherit;
 }
 
 .cart-item cart-remove-button {
