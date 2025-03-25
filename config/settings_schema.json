@@ -526,6 +526,12 @@
         "label": "t:sections.all.colors.label"
       },
       {
+        "type": "checkbox",
+        "id": "show_sku_in_product_card",
+        "label": "t:settings_schema.cards.settings.show_sku.label",
+        "default": true
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.global.settings.header__border.content"
       },
@@ -1528,6 +1534,12 @@
         "id": "show_vendor",
         "label": "t:settings_schema.cart.settings.show_vendor.label",
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_sku",
+        "label": "t:settings_schema.cart.settings.show_sku.label",
+        "default": true
       },
       {
         "type": "checkbox",

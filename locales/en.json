@@ -66,6 +66,7 @@
     "close": "Close",
     "unit_price_separator": "per",
     "vendor": "Vendor:",
+    "sku": "SKU",
     "error": "Error",
     "refresh_page": "Choosing a selection results in a full page refresh.",
     "link_messages": {
@@ -145,6 +146,7 @@
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
       "vendor": "Vendor",
+      "sku": "SKU",
       "video_exit_message": "{{ title }} opens full screen video in same window.",
       "view_full_details": "View full details",
       "xr_button": "View in your space",

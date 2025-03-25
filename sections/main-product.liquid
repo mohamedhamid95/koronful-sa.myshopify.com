@@ -515,8 +515,7 @@
                           assign option_name = option.name
                         endif
                       %}
-                      {% unless option.values.size == 1 and option.values[0] == "-" %}
-                        <fieldset class="js product-form__input">
+                        <fieldset class="js product-form__input {% if option.values.size == 1 and option.values[0] == "-" %}hidden{% endif %}">
                           <legend class="form__label">{{ option_name }}</legend>
                           {%- for value in option.values -%}
                             <input
@@ -534,7 +533,6 @@
                             </label>
                           {%- endfor -%}
                         </fieldset>
-                      {% endunless %}
                     {%- endfor -%}
                     <script type="application/json">
                       {{ product.variants | json }}
@@ -682,11 +680,11 @@
                   {%- endform -%}
                 </product-form>
 
-{% if shop.locale contains 'ar' %}
-{{ 'component-pickup-availability-rtl.css' | asset_url | stylesheet_tag }}
-{% else %}
-{{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
-{% endif %}
+          {% if shop.locale contains 'ar' %}
+          {{ 'component-pickup-availability-rtl.css' | asset_url | stylesheet_tag }}
+          {% else %}
+          {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+          {% endif %}
 
                 {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
@@ -844,6 +842,8 @@
                     <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
                   {%- endif -%}
                 </product-recommendations>
+            {%- when 'sku' -%}
+              <p class="product__sku">{{ product.selected_or_first_available_variant.sku }}</p>
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -1859,6 +1859,11 @@
           "default": false
         }
       ]
+    },
+    {
+      "type": "sku",
+      "name": "t:sections.main-product.blocks.sku.name",
+      "limit": 1
     }
   ],
   "settings": [

@@ -161,6 +161,10 @@
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
             {%- endif -%}
+            {%- if settings.show_sku_in_product_card -%}
+              <span class="visually-hidden">{{ 'accessibility.sku' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ card_product.selected_or_first_available_variant.sku }}</div>
+            {%- endif -%}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
@@ -360,6 +364,10 @@
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
               <div class="caption-with-letter-spacing light">{{ 'products.product.vendor' | t }}</div>
+            {%- endif -%}
+            {%- if settings.show_sku_in_product_card -%}
+              <span class="visually-hidden">{{ 'accessibility.sku' | t }}</span>
+              <div class="caption-with-letter-spacing light">{{ 'products.product.sku' | t }}</div>
             {%- endif -%}
             {% render 'price' %}
           </div>

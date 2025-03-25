@@ -771,6 +771,7 @@ class VariantSelects extends HTMLElement {
       this.updateVariantInput();
       this.renderProductInfo();
       this.updateShareUrl();
+      this.updateSKU();
     }
   }
 
@@ -886,6 +887,12 @@ class VariantSelects extends HTMLElement {
   getVariantData() {
     this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
     return this.variantData;
+  }
+
+  updateSKU() {
+    const skuElement = document.querySelector(`.product__sku`);
+    if (!skuElement) return;
+    skuElement.textContent = this.currentVariant.sku;
   }
 }
 

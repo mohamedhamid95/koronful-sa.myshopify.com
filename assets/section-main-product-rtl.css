@@ -1244,3 +1244,7 @@ a.product__text {
   margin-right: 1.2rem;
   flex-shrink: 0;
 }
+
+.product__sku {
+  margin-top: -1rem;
+}

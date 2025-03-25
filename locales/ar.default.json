@@ -1932,6 +1932,7 @@
     "close": "إغلاق",
     "unit_price_separator": "لكل",
     "vendor": "البائع:",
+    "sku": "رقم المنتج",
     "error": "خطأ",
     "refresh_page": "تحديد الإختيار يقوم بإعادة تحميل الصفحة",
     "link_messages": {
@@ -1991,6 +1992,7 @@
       "sold_out": "مباع",
       "unavailable": "غير متوفر",
       "vendor": "البائع",
+      "sku": "رقم المنتج",
       "video_exit_message": "{{ title }} فتح كامل الفيديو في نفس الصفحة",
       "view_full_details": "عرض جميع التفاصيل",
       "xr_button": "عرض في مجالك",
