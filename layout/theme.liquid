@@ -9,54 +9,54 @@
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 
     <style>
-      /*
-          Scrollbar styling
-      */
-      ::-webkit-scrollbar {
-          width: {{ settings.scrollbar_width | append: 'px' }};
+            /*
+                Scrollbar styling
+            */
+            ::-webkit-scrollbar {
+                width: {{ settings.scrollbar_width | append: 'px' }};
+            }
+            ::-webkit-scrollbar-track {
+                background: {{ settings.scrollbar_track_color }};
+            }
+            ::-webkit-scrollbar-thumb {
+                background: {{ settings.scrollbar_thumb_color }}
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background:  {{ settings.scrollbar_thumb_hover_color }}
+            }
+
+
+         .localization-form__select .icon-caret {
+          max-width:10px;
+              width: 10px;
+          height: 10px;
+        margin-top:5px;
+            margin: 0 10px;
+
+
       }
-      ::-webkit-scrollbar-track {
-          background: {{ settings.scrollbar_track_color }};
-      }
-      ::-webkit-scrollbar-thumb {
-          background: {{ settings.scrollbar_thumb_color }}
-      }
-      ::-webkit-scrollbar-thumb:hover {
-          background:  {{ settings.scrollbar_thumb_hover_color }}
+      .splide--rtl>.splide__arrows .splide__arrow--next{
+        left:100%
       }
 
+        @media (min-width: 1400px) {
+      #eg-testimonials-template--14479715303510__16acdc73-a966-4159-9c95-228098f99011 .splide--rtl .splide__arrow--next {
+           left: -2em
+      }
 
-   .localization-form__select .icon-caret {
-    max-width:10px;
-        width: 10px;
-    height: 10px;
-  margin-top:5px;
-      margin: 0 10px;
+      }
 
+       .splide--ltr  .splide__arrow--next {
+          right: -2em;
+      }
+         .splide--ltr  .splide__arrow--prev  {
+          left: -2em;
+      }
 
-}
-.splide--rtl>.splide__arrows .splide__arrow--next{
-  left:100%
-}
-
-  @media (min-width: 1400px) {
-#eg-testimonials-template--14479715303510__16acdc73-a966-4159-9c95-228098f99011 .splide--rtl .splide__arrow--next {
-     left: -2em
-}
-
-}
-
- .splide--ltr  .splide__arrow--next {
-    right: -2em;
-}
-   .splide--ltr  .splide__arrow--prev  {
-    left: -2em;
-}
-
-  .splide--rtl>.splide__arrows .splide__arrow--prev{
-      transform: translate(3em,-1em);
-  }
-  </style>
+        .splide--rtl>.splide__arrows .splide__arrow--prev{
+            transform: translate(3em,-1em);
+        }
+    </style>
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -273,22 +273,22 @@
       /* End TEMP */
     {% endstyle %}
 
-{% if shop.locale contains 'ar' %}
-{% style %}
-button.shopify-payment-button__button:before {
-  content: var(--buttons-buy-now);
-  font-size: 16px;
-  padding: 9px 1.4em;
-  min-height: 44px;
-}
-{% endstyle %}
-{% endif %}
+    {% if shop.locale contains 'ar' %}
+      {% style %}
+        button.shopify-payment-button__button:before {
+          content: var(--buttons-buy-now);
+          font-size: 16px;
+          padding: 9px 1.4em;
+          min-height: 44px;
+        }
+      {% endstyle %}
+    {% endif %}
 
-	{% if shop.locale contains 'ar' %}
-		{{ 'base-rtl.css' | asset_url | stylesheet_tag }}
-	{% else %}
-		{{ 'base.css' | asset_url | stylesheet_tag }}
-	{% endif %}
+    {% if shop.locale contains 'ar' %}
+      {{ 'base-rtl.css' | asset_url | stylesheet_tag }}
+    {% else %}
+      {{ 'base.css' | asset_url | stylesheet_tag }}
+    {% endif %}
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -298,29 +298,30 @@ button.shopify-payment-button__button:before {
     {%- endunless -%}
 
     {%- if settings.predictive_search_enabled -%}
-	{% if shop.locale contains 'ar' %}
+      {% if shop.locale contains 'ar' %}
       <link rel="stylesheet" href="{{ 'component-predictive-search-rtl.css' | asset_url }}" media="print" onload="this.media='all'">
-	{% else %}
+      {% else %}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
-	{% endif %}
+      {% endif %}
     {%- endif -%}
 
-    	{{ 'custom.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
 
-	{% if shop.locale contains 'ar' %}
-		{{ 'rtl.css' | asset_url | stylesheet_tag }}
-	{% endif %}
+    {% if shop.locale contains 'ar' %}
+      {{ 'rtl.css' | asset_url | stylesheet_tag }}
+    {% endif %}
 
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-    if (Shopify.designMode) {
-      document.documentElement.classList.add('shopify-design-mode');
-    }
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
     </script>
   </head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
+      {{ 'accessibility.skip_to_text' | t }}
     </a>
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -329,6 +330,10 @@ button.shopify-payment-button__button:before {
 
     {% section 'eg-bar' %}
     {% section 'header' %}
+
+    {% comment %} Video loader {% endcomment %}
+    {% render 'video-loader' %}
+
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
@@ -359,26 +364,26 @@ button.shopify-payment-button__button:before {
         cart_change_url: '{{ routes.cart_change_url }}',
         cart_update_url: '{{ routes.cart_update_url }}',
         cart_url: '{{ routes.cart_url }}',
-        predictive_search_url: '{{ routes.predictive_search_url }}'
+        predictive_search_url: '{{ routes.predictive_search_url }}',
       };
 
       window.cartStrings = {
         error: `{{ 'sections.cart.cart_error' | t }}`,
-        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`
-      }
+        quantityError: `{{ 'sections.cart.cart_quantity_error_html' | t: quantity: '[quantity]' }}`,
+      };
 
       window.variantStrings = {
         addToCart: `{{ 'products.product.add_to_cart' | t }}`,
         soldOut: `{{ 'products.product.sold_out' | t }}`,
         unavailable: `{{ 'products.product.unavailable' | t }}`,
-      }
+      };
 
       window.accessibilityStrings = {
         imageAvailable: `{{ 'products.product.media.image_available' | t: index: '[index]' }}`,
         shareSuccess: `{{ 'general.share.success_message' | t }}`,
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
-      }
+      };
     </script>
 
     {%- if settings.predictive_search_enabled -%}
