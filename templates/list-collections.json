@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "eg_parallax_image_mBHXUU": {
       "type": "eg-parallax-image",
       "settings": {
-        "img_mobile": "shopify:\/\/shop_images\/large-monstera-plant-against-a-grey-wall.jpg",
-        "img": "shopify:\/\/shop_images\/green-leaves-of-a-plant.jpg",
+        "img_mobile": "shopify://shop_images/large-monstera-plant-against-a-grey-wall.jpg",
+        "img": "shopify://shop_images/green-leaves-of-a-plant.jpg",
         "img_crop": "center",
         "img_min_height": "320",
         "video": "",
