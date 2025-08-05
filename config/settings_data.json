@@ -284,7 +284,7 @@
           "show_taxes_shipping_text": true,
           "show_view_cart_btn": true,
           "show_payment_icons": true,
-          "cart_goal_value": 200,
+          "cart_goal_value": 500,
           "cart_goal_description_before": "<p><strong>[amount]</strong> فقط عن الحصول على شحن مجاني.</p>",
           "cart_goal_color_before": "#fd7e14",
           "cart_goal_description_after": "<p>مبروك! أنت مؤهل للحصول على <strong>شحن مجاني.</strong></p>",
@@ -335,7 +335,7 @@
         "settings": {
           "show": true,
           "homepage": true,
-          "bg_color": "#d9cf89",
+          "bg_color": "#b59972",
           "text_color": "#191817",
           "font_size": "",
           "font_weight": "",
